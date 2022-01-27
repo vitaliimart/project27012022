@@ -1,0 +1,13 @@
+.class {
+	display: block;
+	padding: 20px 0;
+	text-align: center;
+	margin: 0 auto;
+	background-color: pink;
+}
+
+/* button {
+	display: block;
+	padding: 10px 60px;
+	margin: 0 auto;
+} */

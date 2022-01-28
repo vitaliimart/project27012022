@@ -112,24 +112,24 @@
 
 // alert(`Hello,${user}`);
 
-"use strict";
+// "use strict";
 
-console.log('arr' + '-object');
-console.log(4 + '-object');
-console.log(4 + +'-object');
-console.log(4 + +'50');
+// console.log('arr' + '-object');
+// console.log(4 + '-object');
+// console.log(4 + +'-object');
+// console.log(4 + +'50');
 
-let incr = 10,
-		decr = 10;
+// let incr = 10,
+// 		decr = 10;
 
-incr++;
-decr--;
+// incr++;
+// decr--;
 
-console.log(incr);
-console.log(decr);
+// console.log(incr);
+// console.log(decr);
 
-let incrs = 10,
-		decrs = 10;
+// let incrs = 10,
+// 		decrs = 10;
 
 // ++incrs;
 // --decrs;
@@ -137,23 +137,129 @@ let incrs = 10,
 // console.log(incrs++);
 // console.log(decrs--);
 
-console.log(++incrs);
-console.log(--decrs);
+// console.log(++incrs);
+// console.log(--decrs);
 
-console.log(5%2);
-console.log(2*4 == 8);
-console.log(2*4 == "8");
-console.log(2*4 === "8");
-console.log(2 + 2 * 2 === 8); // false
-console.log(2 + 2 * 2 !== 8); // true
-console.log((2 + 2) * 2 === 8); // true
+// console.log(5%2);
+// console.log(2*4 == 8);
+// console.log(2*4 == "8");
+// console.log(2*4 === "8");
+// console.log(2 + 2 * 2 === 8); // false
+// console.log(2 + 2 * 2 !== 8); // true
+// console.log((2 + 2) * 2 === 8); // true
 
 // &&
 // ||
 
-const isChecked = true,
-			isClose = false;
+// const isChecked = true,
+// 			isClose = false;
 
-console.log(isChecked && isClose);
-console.log(isChecked || isClose);
-console.log(isChecked || !isClose);
+// console.log(isChecked && isClose);
+// console.log(isChecked || isClose);
+// console.log(isChecked || !isClose);
+
+"use strict";
+
+// if (4 == 42) {
+// 	console.log('Ok');
+// } else {
+// 	console.log('Error');
+// }
+
+// const num = 50;
+
+// if (num < 49) {
+// 	console.log('Error');
+// } else if (num > 100) {
+// 	console.log('Too much');
+// } else {
+// 	console.log('Good');
+// }
+// const num = 50;
+// (num == 50) ? console.log("Correct") : console.log("Not Nice");
+
+// const num = 51;
+
+// switch (num) {
+// 	case 49:
+// 		console.log('Not corrrect');
+// 		break;
+// 	case 100:
+// 		console.log('Not corrrect');
+// 		break;
+// 	case 50:
+// 		console.log('You are wright');
+// 		break;
+// 	default:
+// 		console.log('Not in this time');
+// 		break;
+// }
+// let num = 50;
+
+// while (num <= 55) {
+	// console.log(num);
+	// num++;
+// }
+
+// do {
+// 	console.log(num);
+// 	num++;
+// }
+// while (num <= 55);
+
+// for (let i = 0; i < 11; i++) {
+// 	console.log(num);
+// 	num++;
+// }
+
+// for (let i = 1; i < 8; i++) {
+// 	if (i === 5) {
+// 		// continue;
+// 		break;
+// 	}
+// 	console.log(i);
+// }
+
+// function showFirstMessage(a) {
+// 	console.log(`hello, ${a}`);
+// }
+// showFirstMessage('Mike');
+
+// let num = 33;
+
+// function showFirstMessage(text) {
+// 	console.log(text);
+// 	// let num = 27;
+// 	console.log(num);
+// }
+// showFirstMessage('hello world!');
+// console.log(num);
+
+// function calc(a, b) {
+// 	return (a + b);
+// }
+
+// console.log(calc(4, 5));
+// console.log(calc(40, 50));
+// console.log(calc(400, 500));
+
+// function ret() {
+// 	let num = 50;
+// 	return num;
+// }
+
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// const logger = function() {
+// 	console.log('HELLO WORLD');
+// };
+
+// logger();
+
+const calc = (a, b) => {return a + b;};
+
+console.log(calc(3,3));
+console.log(calc(4,3));
+console.log(calc(5,3));
+console.log(calc(6,3));

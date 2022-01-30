@@ -291,9 +291,33 @@
 // console.log(logg.substring(6, 11));
 // console.log(logg.substr(6, 5));
 
-const num = 12.2;
-console.log(Math.round(num));
+// const num = 12.2;
+// console.log(Math.round(num));
 
-const test = '12.2px';
-console.log(parseInt(test));
-console.log(parseFloat(test));
+// const test = '12.2px';
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
+
+function first() {
+	setTimeout(function() {
+		console.log(1);
+	}, 500);
+}
+
+function second() {
+	console.log(2);
+}
+
+first();
+second();
+
+function learnJS (lang, callback) {
+	console.log(`I learn ${lang}`);
+	callback();
+}
+
+function callback() {
+	console.log('It is cool');
+}
+
+learnJS('JS', callback);

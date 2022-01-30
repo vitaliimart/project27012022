@@ -298,26 +298,75 @@
 // console.log(parseInt(test));
 // console.log(parseFloat(test));
 
-function first() {
-	setTimeout(function() {
-		console.log(1);
-	}, 500);
+// function first() {
+// 	setTimeout(function() {
+// 		console.log(1);
+// 	}, 500);
+// }
+
+// function second() {
+// 	console.log(2);
+// }
+
+// first();
+// second();
+
+// function learnJS (lang, callback) {
+// 	console.log(`I learn ${lang}`);
+// 	callback();
+// }
+
+// function callback() {
+// 	console.log('It is cool');
+// }
+
+// learnJS('JS', callback);
+
+const options = {
+	name: 'test',
+	width: 1024,
+	height: 1024,
+	colors: {
+		border: 'black',
+		bg: 'red'
+	},
+	makeTest: function() {
+		console.log('Some Test');
+	}
+};
+
+// console.log(options.name);
+// console.log(options.colors.border);
+
+// console.log(options);
+
+// delete options.name;
+// console.log(options);
+
+// for (let key in options) {
+// 	console.log(`Свойство ${key} имеет значение ${options[key]}`);
+// }
+
+let counter = 0;
+
+for (let key in options) {
+	if (typeof(options[key]) === 'object') {
+		for (let i in options[key]) {
+			console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+			counter++;
+		}
+	} else {
+		console.log(`Свойство ${key} имеет значение ${options[key]}`);
+		counter++;
+	}
 }
+console.log(counter);
+// console.log(options['colors']['border']);
 
-function second() {
-	console.log(2);
-}
+console.log(Object.keys(options).length);
 
-first();
-second();
+options.makeTest();
 
-function learnJS (lang, callback) {
-	console.log(`I learn ${lang}`);
-	callback();
-}
+const{border, bg} = options.colors;
 
-function callback() {
-	console.log('It is cool');
-}
-
-learnJS('JS', callback);
+console.log(border);

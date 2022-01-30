@@ -1,4 +1,4 @@
-
+"use strict";
 
 // const start = document.querySelector('#start'),
 // 			progress = document.querySelector('#progress'),
@@ -158,7 +158,7 @@
 // console.log(isChecked || isClose);
 // console.log(isChecked || !isClose);
 
-"use strict";
+
 
 // if (4 == 42) {
 // 	console.log('Ok');
@@ -257,9 +257,36 @@
 
 // logger();
 
-const calc = (a, b) => {return a + b;};
+// const calc = (a, b) => {return a + b;};
 
-console.log(calc(3,3));
-console.log(calc(4,3));
-console.log(calc(5,3));
-console.log(calc(6,3));
+// console.log(calc(3,3));
+// console.log(calc(4,3));
+// console.log(calc(5,3));
+// console.log(calc(6,3));
+
+const str = 'test';
+const arr = [1, 2, 3];
+
+console.log(arr.length);
+console.log(str.length);
+console.log(str[2]);
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+const fruit = 'Some fruit';
+console.log(fruit.indexOf('fruit'));
+console.log(fruit.indexOf('q'));
+
+const logg = 'Hello world';
+console.log(logg.slice(6, 11));
+console.log(logg.length);
+
+console.log(logg.slice(6, logg.length));
+console.log(logg.slice(6));
+console.log(logg.slice(-5));
+
+console.log(logg.slice(-1));
+console.log(logg.slice(0, 5));
+
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 5));

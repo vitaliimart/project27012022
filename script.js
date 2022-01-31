@@ -397,11 +397,48 @@
 // const products =str.split(", ");
 // console.log(products);
 
-const arr = prompt("", "");
-const cards =arr.split(", ");
-cards.sort(compareNum);
-console.log(cards.join('; '));
+// const arr = prompt("", "");
+// const cards =arr.split(", ");
+// cards.sort(compareNum);
+// console.log(cards.join('; '));
 
-function compareNum(a, b) { 
-	return a - b; 
-}
+// function compareNum(a, b) { 
+// 	return a - b; 
+// }
+
+// ООП - Об'єктно-орієнтоване програмування
+
+let str = 'some';
+let strObj = new String(str);
+
+console.log(typeof(str)); // string
+console.log(typeof(strObj)); // object
+
+console.dir([1,2,3]);
+
+const soldier = {
+	health: 400,
+	armor: 100,
+	sayHello: function() {
+		console.log('Hello');
+	}
+};
+
+// const jonh = {
+// 	health: 100
+// };
+
+// jonh.__proto__ = soldier;
+// Object.setPrototypeOf(jonh, soldier);
+
+// console.log(jonh); // { health: 100 }
+// console.log(jonh.armor); // 100
+// jonh.sayHello(); // Hello
+
+
+const jonh = Object.create(soldier);
+jonh.sayHello(); // Hello
+
+
+// Object.getPrototypeOf
+

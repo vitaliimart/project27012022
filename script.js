@@ -408,21 +408,21 @@
 
 // ООП - Об'єктно-орієнтоване програмування
 
-let str = 'some';
-let strObj = new String(str);
+// let str = 'some';
+// let strObj = new String(str);
 
-console.log(typeof(str)); // string
-console.log(typeof(strObj)); // object
+// console.log(typeof(str)); // string
+// console.log(typeof(strObj)); // object
 
-console.dir([1,2,3]);
+// console.dir([1,2,3]);
 
-const soldier = {
-	health: 400,
-	armor: 100,
-	sayHello: function() {
-		console.log('Hello');
-	}
-};
+// const soldier = {
+// 	health: 400,
+// 	armor: 100,
+// 	sayHello: function() {
+// 		console.log('Hello');
+// 	}
+// };
 
 // const jonh = {
 // 	health: 100
@@ -436,9 +436,82 @@ const soldier = {
 // jonh.sayHello(); // Hello
 
 
-const jonh = Object.create(soldier);
-jonh.sayHello(); // Hello
+// const jonh = Object.create(soldier);
+// jonh.sayHello(); // Hello
 
 
 // Object.getPrototypeOf
+
+console.log(typeof(String(null)));
+console.log(String(null));
+
+console.log(typeof(5 + ''));
+
+const num = 5;
+console.log('https://vk.com/catalog/' + num);
+
+const fontSize = 26 + 'px';
+console.log(fontSize);
+
+console.log(typeof(Number('4')));
+
+console.log(typeof(+('5')));
+
+console.log(typeof(parseInt('15px', 10)));
+console.log(parseInt('15px', 10));
+
+// let answ = +prompt('Hello', '');
+// console.log(answ);
+
+let bool = 0;
+console.log(Boolean(bool));
+
+let bool2 = null;
+console.log(Boolean(bool2));
+
+let bool3 = '';
+console.log(Boolean(bool3));
+
+let bool5 = undefined;
+console.log(Boolean(bool5));
+
+let bool6 = NaN;
+console.log(Boolean(bool6));
+
+let bool7 = {};
+console.log(Boolean(bool7));
+
+let bool8 = [];
+console.log(Boolean(bool8));
+
+let bool4 = ' ';
+console.log(Boolean(bool4));
+
+let bool9 = +'0';
+console.log(Boolean(bool9));
+
+console.log(Boolean(!'44444'));
+console.log(Boolean(!!'44444'));
+
+
+let x =5;
+console.log(x++);
+console.log([] + false - null + true);
+
+let y = 1; 
+let z = y = 2;
+console.log(z);
+
+console.log([] + 1 +2);
+console.log('1'[0]);
+console.log(2 && 1 && null && 0 && undefined);
+console.log(!!(1 && 2) == (1 && 2));
+
+let a = [1, 2, 3];
+let b = [1, 2, 3];
+console.log(a === b);
+console.log( +'Infinity' );
+
+console.log('Ёжик' > 'яблоко');
+console.log(0 || "" || 2 || undefined || true || false);
 

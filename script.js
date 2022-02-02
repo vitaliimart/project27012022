@@ -521,27 +521,65 @@
 // Отримання елементів зі сторінки
 // Додав верстку та стилі до верстки
 
-const box = document.getElementById('box');
+const box = document.getElementById('box'),
+			btns = document.getElementsByTagName('button'),
+			circles = document.getElementsByClassName('circle'),
+			hearts = document.querySelectorAll('.heart'),
+			oneHeart = document.querySelector('.heart'),
+			wrapper = document.querySelector('.wrapper');
 
-console.log(box);
+// hearts.forEach(item => {
+// 	console.log(item);
+// });
 
-const btns = document.getElementsByTagName('button');
+// console.log(box);
+// console.log(btns);
+// console.log(btns[1]);
+// console.log(hearts);
+// console.log(circles);
+// console.log(oneHeart);
 
-console.log(btns);
+console.dir(box);
 
-console.log(btns[1]);
+box.style.backgroundColor = 'blue';
+box.style.width = '500px';
 
-const circles = document.getElementsByClassName('circle');
-console.log(circles);
+btns[1].style.borderRadius = '100%';
 
-const hearts = document.querySelectorAll('.heart');
+box.style.cssText = 'background-color: green; width: 500px';
 
-console.log(hearts);
+// for (let i = 0; i < hearts.length; i++) {
+// 	hearts[i].style.backgroundColor = 'blue';
+// }
 
 hearts.forEach(item => {
-	console.log(item);
+	item.style.backgroundColor = 'blue';
 });
 
-const oneHeart = document.querySelector('.heart');
-console.log(oneHeart);
+const div = document.createElement('div');
+
+div.classList.add('black');
+div.style.width = '400px';
+div.style.height = '300px';
+document.body.append(div);
+
+// wrapper.append(div);
+// wrapper.prepend(div);
+
+// hearts[0].before(div);
+// hearts[0].after(div);
+
+// circles[0].remove();
+
+hearts[0].replaceWith(circles[0]);
+
+// div.innerHTML = "Hello world";
+// div.innerHTML = "<h2>My name is Petya</h2>";
+// div.textContent = "Hello";
+
+div.insertAdjacentHTML('beforebegin', '<h2>перед элементом</h2>');
+div.insertAdjacentHTML('afterbegin', '<h2>в начале элемента</h2>');
+
+div.insertAdjacentHTML('beforeend', '<h3>перед концом элемента</h3>');
+div.insertAdjacentHTML('afterend', '<h3>после элемента</h3>');
 

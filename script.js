@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // const start = document.querySelector('#start'),
 // 			progress = document.querySelector('#progress'),
@@ -521,12 +521,12 @@
 // Отримання елементів зі сторінки
 // Додав верстку та стилі до верстки
 
-const box = document.getElementById('box'),
-			btns = document.getElementsByTagName('button'),
-			circles = document.getElementsByClassName('circle'),
-			hearts = document.querySelectorAll('.heart'),
-			oneHeart = document.querySelector('.heart'),
-			wrapper = document.querySelector('.wrapper');
+// const box = document.getElementById('box'),
+// 			btns = document.getElementsByTagName('button'),
+// 			circles = document.getElementsByClassName('circle'),
+// 			hearts = document.querySelectorAll('.heart'),
+// 			oneHeart = document.querySelector('.heart'),
+// 			wrapper = document.querySelector('.wrapper');
 
 // hearts.forEach(item => {
 // 	console.log(item);
@@ -539,29 +539,29 @@ const box = document.getElementById('box'),
 // console.log(circles);
 // console.log(oneHeart);
 
-console.dir(box);
+// console.dir(box);
 
-box.style.backgroundColor = 'blue';
-box.style.width = '500px';
+// box.style.backgroundColor = 'blue';
+// box.style.width = '500px';
 
-btns[1].style.borderRadius = '100%';
+// btns[1].style.borderRadius = '100%';
 
-box.style.cssText = 'background-color: green; width: 500px';
+// box.style.cssText = 'background-color: green; width: 500px';
 
 // for (let i = 0; i < hearts.length; i++) {
 // 	hearts[i].style.backgroundColor = 'blue';
 // }
 
-hearts.forEach(item => {
-	item.style.backgroundColor = 'blue';
-});
+// hearts.forEach(item => {
+// 	item.style.backgroundColor = 'blue';
+// });
 
-const div = document.createElement('div');
+// const div = document.createElement('div');
 
-div.classList.add('black');
-div.style.width = '400px';
-div.style.height = '300px';
-document.body.append(div);
+// div.classList.add('black');
+// div.style.width = '400px';
+// div.style.height = '300px';
+// document.body.append(div);
 
 // wrapper.append(div);
 // wrapper.prepend(div);
@@ -571,15 +571,67 @@ document.body.append(div);
 
 // circles[0].remove();
 
-hearts[0].replaceWith(circles[0]);
+// hearts[0].replaceWith(circles[0]);
 
 // div.innerHTML = "Hello world";
 // div.innerHTML = "<h2>My name is Petya</h2>";
 // div.textContent = "Hello";
 
-div.insertAdjacentHTML('beforebegin', '<h2>перед элементом</h2>');
-div.insertAdjacentHTML('afterbegin', '<h2>в начале элемента</h2>');
+// div.insertAdjacentHTML('beforebegin', '<h2>перед элементом</h2>');
+// div.insertAdjacentHTML('afterbegin', '<h2>в начале элемента</h2>');
 
-div.insertAdjacentHTML('beforeend', '<h3>перед концом элемента</h3>');
-div.insertAdjacentHTML('afterend', '<h3>после элемента</h3>');
+// div.insertAdjacentHTML('beforeend', '<h3>перед концом элемента</h3>');
+// div.insertAdjacentHTML('afterend', '<h3>после элемента</h3>');
 
+// Події та їх обробники
+const btn = document.querySelector('button'),
+			btns = document.querySelectorAll('button'),
+			overlay = document.querySelector('.overlay');
+
+// btn.addEventListener('mouseenter', () => {
+// 	alert("Hover");
+// });
+
+// btn.addEventListener('click', () => {
+// 	alert("Click");
+// });
+
+// btn.addEventListener('click', () => {
+// 	alert("Second Click");
+// });
+
+
+// btn.addEventListener('mouseenter', (e) => {
+// 	console.log(e);
+// });
+// btn.addEventListener('mouseenter', (e) => {
+// 	console.log(e.target);
+// 	e.target.remove();
+// });
+
+// let i = 0;
+
+const deleteElement = (e) => {
+	// console.log(e.target);
+	console.log(e.currentTarget);
+	console.log(e.type);
+	// i++;
+	// if (i == 1) {
+	// 	btn.removeEventListener('click', deleteElement);
+	// }
+};
+
+// btn.addEventListener('click', deleteElement);
+// overlay.addEventListener('click', deleteElement);
+
+btns.forEach(btn => {
+	btn.addEventListener('click', deleteElement, {once: true});
+});
+
+const link = document.querySelector('a');
+
+link.addEventListener('click', function(event) {
+	event.preventDefault();
+
+	console.log(event.target);
+});

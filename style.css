@@ -5,12 +5,13 @@
 }
 
 button {
-	width: 80px;
-	height: 30px;
-	margin-top: 10px;
+	width: 120px;
+	height: 60px;
+	padding: 15px;
+	margin: 10px;
 	border: none;
 	border-radius: 8px;
-	background-color: #000;
+	background-color: green;
 	color: #fff;
 	cursor: pointer;
 	outline: none;
@@ -79,4 +80,9 @@ button {
 	margin-bottom: 30px;
 	margin-top: 30px;
 	color: #fff;
+}
+
+.link {
+	margin: 20px;
+	display: block;
 }

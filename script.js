@@ -583,10 +583,10 @@
 // div.insertAdjacentHTML('beforeend', '<h3>перед концом элемента</h3>');
 // div.insertAdjacentHTML('afterend', '<h3>после элемента</h3>');
 
-// Події та їх обробники
-const btn = document.querySelector('button'),
-			btns = document.querySelectorAll('button'),
-			overlay = document.querySelector('.overlay');
+// Події та їх обробники -----------------------------------------------------------------------
+// const btn = document.querySelector('button'),
+// 			btns = document.querySelectorAll('button'),
+// 			overlay = document.querySelector('.overlay');
 
 // btn.addEventListener('mouseenter', () => {
 // 	alert("Hover");
@@ -611,27 +611,58 @@ const btn = document.querySelector('button'),
 
 // let i = 0;
 
-const deleteElement = (e) => {
-	// console.log(e.target);
-	console.log(e.currentTarget);
-	console.log(e.type);
-	// i++;
-	// if (i == 1) {
-	// 	btn.removeEventListener('click', deleteElement);
-	// }
-};
+// const deleteElement = (e) => {
+// 	// console.log(e.target);
+// 	console.log(e.currentTarget);
+// 	console.log(e.type);
+// 	// i++;
+// 	// if (i == 1) {
+// 	// 	btn.removeEventListener('click', deleteElement);
+// 	// }
+// };
 
 // btn.addEventListener('click', deleteElement);
 // overlay.addEventListener('click', deleteElement);
 
-btns.forEach(btn => {
-	btn.addEventListener('click', deleteElement, {once: true});
-});
+// btns.forEach(btn => {
+// 	btn.addEventListener('click', deleteElement, {once: true});
+// });
 
-const link = document.querySelector('a');
+// const link = document.querySelector('a');
 
-link.addEventListener('click', function(event) {
-	event.preventDefault();
+// link.addEventListener('click', function(event) {
+// 	event.preventDefault();
 
-	console.log(event.target);
-});
+// 	console.log(event.target);
+// });
+
+
+// навигация по DOM дереву------------------------------------------
+console.log(document.body);
+console.log(document.head);
+console.log(document.body);
+console.log(document.documentElement);
+
+console.log(document.body.childNodes);
+
+console.log(document.body.firstChild);
+console.log(document.body.lastChild);
+
+console.log(document.querySelector('#current').parentNode);
+console.log(document.querySelector('#current').parentNode.parentNode);
+
+console.log(document.querySelector('[data-current="3"]'));
+console.log(document.querySelector('[data-current="3"]').nextSibling);
+console.log(document.querySelector('[data-current="3"]').previousSibling);
+console.log(document.querySelector('[data-current="3"]').nextElementSibling);
+console.log(document.body.firstElementChild);
+console.log(document.body.lastElementChild);
+
+for (let node of document.body.childNodes) {
+	if (node.nodeName == '#text') {
+		continue;
+	}
+	console.log(node);
+}
+
+// ----------------------------------

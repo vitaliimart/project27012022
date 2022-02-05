@@ -1,8 +1,13 @@
+body {
+	height: 1000px;
+}
+
 .box {
 	width: 150px;
-	height: 150px;
+	height: 100px;
 	background-color: red;
 }
+
 
 button {
 	width: 120px;

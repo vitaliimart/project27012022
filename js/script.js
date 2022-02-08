@@ -1,65 +1,47 @@
-// const timerId = setTimeout(function(text) {
-// 	console.log('text');
-// }, 2000, 'Hello');
+'use strict';
 
-// const timerId = setTimeout(logger, 2000);
-
-// function logger() {
-// 	console.log('text');
-// }
+const now = new Date('2022-03-01');
+// new Date.parse('2022-03-01');
+// console.log(now);
 
 
+// const now = new Date('2022-03-01');
+// const now = new Date(2022, 5, 1, 20);
+// const now = new Date(0);
+// const now = new Date(-99999999);
+// console.log(now);
 
-// setTimeout(logger, 2000);
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getHours());
+// console.log(now.getMinutes());
+// console.log(now.getSeconds());
+// console.log(now.getMilliseconds());
+// console.log(now.getDay());
+// console.log(now.getUTCHours());
 
-// function logger() {
-// 	console.log('text');
-// }
-
-
-// const timerId = setTimeout(logger, 2000);
-// clearInterval(timerId);
-// function logger() {
-// 	console.log('text');
-// }
-
-const btn = document.querySelector('.btn');
-let	timerId,
-		i = 0;
-
-// btn.addEventListener('click', () => {
-// 	// const timerId = setTimeout(logger, 2000);
-// 	timerId = setInterval(logger, 500);
-// });
-
-// function logger() {
-// 	if (i === 3) {
-// 		clearInterval(timerId);
-// 	}
-// 		console.log('text');
-// 	i++;
-// }
-
-// let id = setTimeout(function log() {
-// 	console.log('Hello');
-// 	id = setTimeout(log, 500);
-// }, 500);
+// console.log(now.getTimezoneOffset());
+// console.log(now.getTime());
 
 
-function myAnimation() {
-	const elem = document.querySelector('.box');
-	let pos = 0;
+// console.log(now);
+// console.log(now.setHours(18, 40));
+// console.log(now);
 
-	const id = setInterval(frame, 10);
-	function frame() {
-		if (pos == 300) {
-			clearInterval(id);
-		} else {
-			pos++;
-			elem.style.top = pos + 'px';
-			elem.style.left = pos + 'px';
-		}
-	}
+
+// console.log(now);
+// console.log(now);
+// console.log(now);
+// console.log(now);
+// console.log(now);
+// console.log(now);
+
+let start = new Date();
+
+for (let i = 0; i < 100000; i++) {
+	let some = i**3;
 }
 
-btn.addEventListener('click', myAnimation);
+let end = new Date();
+alert(`Цикл відпрацював за ${end-start} мілісекунд`);

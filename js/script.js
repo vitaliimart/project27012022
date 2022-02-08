@@ -1,47 +1,32 @@
 'use strict';
 
-const now = new Date('2022-03-01');
-// new Date.parse('2022-03-01');
-// console.log(now);
+const box = document.querySelector('.box'),
+			btn = document.querySelector('button');
+// const	width = box.clientWidth;
+// const	height = box.clientHeight;
+// const	width = box.offsetWidth;
+// const	height = box.offsetHeight;
+// const	width = box.scrollWidth;
+// const	height = box.scrollHeight;
 
+// console.log(width, height);
 
-// const now = new Date('2022-03-01');
-// const now = new Date(2022, 5, 1, 20);
-// const now = new Date(0);
-// const now = new Date(-99999999);
-// console.log(now);
+// btn.addEventListener('click', () => {
+	// box.style.height = box.scrollHeight + 'px';
+	// console.log(box.scrollTop);
+// });
 
-// console.log(now.getFullYear());
-// console.log(now.getMonth());
-// console.log(now.getDate());
-// console.log(now.getHours());
-// console.log(now.getMinutes());
-// console.log(now.getSeconds());
-// console.log(now.getMilliseconds());
-// console.log(now.getDay());
-// console.log(now.getUTCHours());
+// console.log(box.getBoundingClientRect());
+// console.log(box.getBoundingClientRect().top);
+// console.log(box.getBoundingClientRect().right);
+// console.log(box.getBoundingClientRect().bottom);
+// console.log(box.getBoundingClientRect().left);
 
-// console.log(now.getTimezoneOffset());
-// console.log(now.getTime());
+const style = window.getComputedStyle(box);
+// console.log(style);
+console.log(style.display);
 
+console.log(document.documentElement.scrollTop);
 
-// console.log(now);
-// console.log(now.setHours(18, 40));
-// console.log(now);
-
-
-// console.log(now);
-// console.log(now);
-// console.log(now);
-// console.log(now);
-// console.log(now);
-// console.log(now);
-
-let start = new Date();
-
-for (let i = 0; i < 100000; i++) {
-	let some = i**3;
-}
-
-let end = new Date();
-alert(`Цикл відпрацював за ${end-start} мілісекунд`);
+window.scrollBy(0, 400);
+window.scrollTo(400, 0);

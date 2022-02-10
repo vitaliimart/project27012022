@@ -1,32 +1,41 @@
 'use strict';
+// const num = new Number(3);
+// const num = new Function(3);
+// console.log(num);
 
-const box = document.querySelector('.box'),
-			btn = document.querySelector('button');
-// const	width = box.clientWidth;
-// const	height = box.clientHeight;
-// const	width = box.offsetWidth;
-// const	height = box.offsetHeight;
-// const	width = box.scrollWidth;
-// const	height = box.scrollHeight;
+function User(name, id) {
+	this.name = name;
+	this.id = id;
+	this.human = true;
+	this.hello = function() {
+		console.log(`Hello ${this.name}`);
+	};
+}
 
-// console.log(width, height);
+User.prototype.exit = function(name) {
+	console.log(`Пользователь ${this.name} ушел`);
+};
 
-// btn.addEventListener('click', () => {
-	// box.style.height = box.scrollHeight + 'px';
-	// console.log(box.scrollTop);
-// });
+const ivan = new User('Ivan', 28);
+const alex = new User('Alex', 20);
 
-// console.log(box.getBoundingClientRect());
-// console.log(box.getBoundingClientRect().top);
-// console.log(box.getBoundingClientRect().right);
-// console.log(box.getBoundingClientRect().bottom);
-// console.log(box.getBoundingClientRect().left);
+ivan.hello();
+alex.hello();
+ivan.exit();
 
-const style = window.getComputedStyle(box);
-// console.log(style);
-console.log(style.display);
-
-console.log(document.documentElement.scrollTop);
-
-window.scrollBy(0, 400);
-window.scrollTo(400, 0);
+// console.log(ivan);
+// console.log(alex);
+//----------------класи------------------------
+class User {
+	constructor(name, id) {
+		this.name = name;
+		this.id = id;
+		this.human = true;
+	}
+	hello() {
+		console.log(`Hello ${this.name}`);
+	}
+	exit() {
+		console.log(`Пользователь ${this.name} ушел`);
+	}
+}

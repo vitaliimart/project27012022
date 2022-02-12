@@ -1,41 +1,82 @@
-'use strict';
-// const num = new Number(3);
-// const num = new Function(3);
-// console.log(num);
+// 'use strict';
+// 1) звичайна функція: this = window, але якщо 'use strict' - underfined
+// function showThis() {
+// 	console.log(this);
+// }
+// showThis();
 
-function User(name, id) {
-	this.name = name;
-	this.id = id;
-	this.human = true;
-	this.hello = function() {
-		console.log(`Hello ${this.name}`);
-	};
+// function showThis(a, b) {
+// 	console.log(this);
+// 	function sum() {
+// 		console.log(this);
+// 		return a + b;
+// 	}
+
+// 	console.log(sum());
+// }
+// showThis(4, 5);
+
+
+
+// 2) контекст виклику функції як метод об'єкту
+// контекст у методів об'єкту - сам об'єкт
+
+// 'use strict';
+
+// const obj = {
+// 	a: 20,
+// 	b: 15,
+// 	sum: function() {
+// 		console.log(this);
+		// function shout() {
+		// 	console.log(this);
+		// }
+		// shout();
+// 	}
+// };
+// obj.sum();
+
+//3) this у функціях-конструкторах і класах - це новий екземпляр об'єкта
+
+// function User(name, id) {
+// 	this.name = name;
+// 	this.id = id;
+// 	this.human = true;
+// 	this.hello = function() {
+// 		console.log('Hello' + this.name);
+// 	};
+// }
+// let ivan = new User('Ivan', 23);
+// console.log(ivan);
+
+// 4) присвоєння this вручну будь-якій функції
+// function sayName(){
+// 	console.log(this);
+// 	console.log(this.name);
+// }
+
+// const user = {
+// 	name: 'John'
+// };
+
+// sayName.call(user);
+// sayName.apply(user);
+
+function sayName(surname){
+	console.log(this);
+	console.log(this.name + surname);
 }
 
-User.prototype.exit = function(name) {
-	console.log(`Пользователь ${this.name} ушел`);
+const user = {
+	name: 'John'
 };
 
-const ivan = new User('Ivan', 28);
-const alex = new User('Alex', 20);
+sayName.call(user, ' Smith');
+sayName.apply(user, [' Smith']);
 
-ivan.hello();
-alex.hello();
-ivan.exit();
-
-// console.log(ivan);
-// console.log(alex);
-//----------------класи------------------------
-class User {
-	constructor(name, id) {
-		this.name = name;
-		this.id = id;
-		this.human = true;
-	}
-	hello() {
-		console.log(`Hello ${this.name}`);
-	}
-	exit() {
-		console.log(`Пользователь ${this.name} ушел`);
-	}
+function count(num) {
+	return this*num;
 }
+
+const double = count.bind(2);
+console.log(double(13));

@@ -62,21 +62,69 @@
 // sayName.call(user);
 // sayName.apply(user);
 
-function sayName(surname){
-	console.log(this);
-	console.log(this.name + surname);
-}
+// function sayName(surname){
+// 	console.log(this);
+// 	console.log(this.name + surname);
+// }
 
-const user = {
-	name: 'John'
+// const user = {
+// 	name: 'John'
+// };
+
+// sayName.call(user, ' Smith');
+// sayName.apply(user, [' Smith']);
+
+// function count(num) {
+// 	return this*num;
+// }
+
+// const double = count.bind(2);
+// console.log(double(3));
+// console.log(double(13));
+
+
+
+
+const btn = document.querySelector('button');
+
+
+// класичний запис функції та приклад конткесту її виклику
+// btn.addEventListener('click', function() {
+// 	console.log(this);
+// 	this.style.backgroundColor = 'red';
+// });
+
+// btn.addEventListener('click', () => {
+// 	this.style.backgroundColor = 'red';
+// });
+
+btn.addEventListener('click', (e) => {
+	e.target.style.backgroundColor = 'red';
+});
+
+
+
+
+
+// стрілкова функція та приклад контексту її виклику
+const obj = {
+	num: 5,
+	sayNumber: function() {
+		const say = () => {
+			console.log(this.num);
+		};
+
+		say();
+	}
 };
 
-sayName.call(user, ' Smith');
-sayName.apply(user, [' Smith']);
+obj.sayNumber();
 
-function count(num) {
-	return this*num;
-}
+// приклад 3
+// const doubles = (a) => {
+// 	return a*2;
+// };
 
-const double = count.bind(2);
-console.log(double(13));
+// const doubles = (a) => a*2;
+// const doubles = (a, b) => a*b;
+// console.log(doubles(4, 6));
